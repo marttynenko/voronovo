@@ -1,0 +1,135 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-size: 16px;
+}
+body {
+	font-family: 'Roboto', serif;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.42;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.error-page {
+	min-height: 100%;
+	background-color: #0094FF;
+	background-image: url(../images/404-1.png), url(../images/404-2.png);
+	background-repeat: no-repeat;
+	background-position: 0 0, right bottom;
+	background-size: 25%;
+	padding: 50px 30px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	display: -ms-flex;
+	display: -ms-inline-flexbox;
+	display: -ms-flexbox;	
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	color: #FFF;
+	text-align: center;
+}
+.error-content {
+	width: 100%;
+	max-width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.error-logo {
+	margin-bottom: 40px;
+}
+.error-title {
+	font-weight: 700;
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.error-hint {
+	margin-bottom: 50px;
+	font-size: 25px;
+	line-height: 1.2;
+}
+.btn-white {
+	display: inline-block;
+	vertical-align: middle;
+	height: 56px;
+	line-height: 56px;
+	min-width: 260px;
+	max-width: 100%;
+	max-width: calc(100% - 20px);
+	padding: 0px 15px;
+	margin: 0px 10px 10px;
+	text-align: center;
+	color: #0094FF;
+	background: #FFF;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+}
+a {
+	-ms-transition: all .3s;
+	transition: all .3s;
+}
+
+.btn-white-bordered {
+	display: inline-block;
+	vertical-align: middle;
+	height: 56px;
+	line-height: 52px;
+	border: 2px solid #FFF;
+	min-width: 260px;
+	max-width: 100%;
+	max-width: calc(100% - 20px);
+	padding: 0px 15px;
+	margin: 0px 10px 10px;
+	text-align: center;
+	color: #FFF;
+	background: transparent;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn-white:hover {
+	background: rgba(255,255,255,0.85);
+}
+.btn-white-bordered:hover {
+	background: rgba(255,255,255,0.15);
+}
+
+@media (max-width: 576px) {
+	.error-title {
+		font-size: 38px;
+		line-height: 1.2;
+	}
+	.error-hint {
+		font-size: 20px;
+	}
+	.btn-white-bordered, .btn-white {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+		min-width: 100%;
+	}
+}

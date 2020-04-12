@@ -1,0 +1,34 @@
+<div class="white-popup popup-remember zoom-anim-dialog">
+
+  <div class="h1 white-popup-title">Восстановить пароль</div>
+
+  <form action="" id="form_remember">
+    <div class="field">
+      <input type="email" name="email" placeholder="Электронная почта*">
+    </div>
+
+    <p class="ui-centered">Новый пароль для входа на сайт будет выслан Вам на почту</p>
+
+    <div class="field-btn">
+      <button class="btn btn-secondary btn-extra btn-block">Восстановить</button>
+    </div>
+    
+    
+  </form>
+
+
+  <script>
+    jQuery(document).ready(function($){
+
+      $("#form_remember").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          }
+        }
+      });
+
+    });
+  </script>
+</div>

@@ -1,0 +1,103 @@
+<div class="white-popup popup-auth zoom-anim-dialog">
+  <div class="popup-auth-tabs flex">
+    <a href="#tab-auth"><span>Войти</span></a>
+    <a href="#tab-reg"><span>Регистрация</span></a>
+  </div>
+
+  <div id="tab-auth" class="tab-popup-content">
+    <div class="h1 popup-auth-title">Авторизация</div>
+
+    <form action="" id="form_auth">
+      <div class="field">
+        <input type="email" name="email" placeholder="Электронная почта">
+      </div>
+      <div class="field">
+        <input type="password" name="password" placeholder="Пароль">
+      </div>
+      <div class="feild field-remember flex align-justify valign-center">
+        <label for="remember" class="label-styler">
+          <input type="checkbox" name="remember">
+          <span>Запомнить меня</span>
+        </label>
+        <a href="javascript:void(0)" data-href="popup-remember.html" class="link-secondary ajax-mfp">Забыли пароль?</a>
+      </div>
+
+      <div class="field-btn">
+        <button class="btn btn-secondary btn-extra btn-block">Войти на сайт</button>
+      </div>
+    </form>
+
+    <div class="popup-auth-social ui-centered">
+      <div class="h4">Войти с помощью</div>
+      <div class="social-auth">
+        <a href="#"><svg class="sprite svg-h-social"><use xlink:href="svg/svg/symbols.svg#s-vk"/></svg></a>
+        <a href="#"><svg class="sprite svg-h-social"><use xlink:href="svg/svg/symbols.svg#s-fb"/></svg></a>
+        <a href="#"><svg class="sprite svg-h-social"><use xlink:href="svg/svg/symbols.svg#s-tw"/></svg></a>
+        <a href="#"><svg class="sprite svg-h-social"><use xlink:href="svg/svg/symbols.svg#s-ok"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-reg" class="tab-popup-content">
+    <div class="h1 popup-auth-title">Регистрация</div>
+
+    <form action="" id="form_register">
+      <div class="field">
+        <input type="email" name="email" placeholder="Электронная почта*">
+      </div>
+      <div class="field">
+        <input type="password" name="password" id="reg_pass" placeholder="Пароль*">
+      </div>
+      <div class="field">
+        <input type="password" name="password_confirm" id="reg_pass_2" placeholder="Повторите пароль*">
+      </div>
+
+      <div class="field-btn">
+        <button class="btn btn-secondary btn-extra btn-block">Зарегестрироваться</button>
+      </div>
+    </form>
+
+  </div>
+
+
+  <script>
+    jQuery(document).ready(function($){
+      $('.popup-auth-tabs a').Tabs();
+
+      $('.white-popup input[type="checkbox"], .white-popup input[type="radio"],.white-popup  input[type="file"], .white-popup  select').styler({
+			  singleSelectzIndex: '1',
+      });
+
+      $("#form_auth").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true,
+            minlength: 6
+          }
+        }
+      });
+
+      $("#form_register").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true,
+            minlength: 6
+          },
+          password_confirm: {
+            required: true,
+            equalTo: "#reg_pass"
+          }
+        }
+      });
+
+    });
+  </script>
+</div>

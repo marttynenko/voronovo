@@ -1,0 +1,154 @@
+footer.footer {
+  background: #000E3B;
+  color: rgba(#FFF,.5);
+  padding-top: 40px;
+  padding-bottom: 25px;
+  font-family: $sans;
+
+  a {
+    color: #FFF;
+  }
+}
+.col-f-logo {
+  flex: 0 0 18%;
+  max-width: 18%;
+}
+.col-f-col {
+  flex: 0 0 27.33%;
+  max-width: 27.33%;
+}
+.f-title {
+  font-family: $basefont;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #FFF;
+
+  a {
+    color: #FFF;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom-color: #FFF;
+    }
+  }
+}
+.f-top {
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(#FFF,.1);
+
+  .ui-block {
+    margin-bottom: 35px;
+  }
+}
+.f-about {
+  padding-right: 10px;
+  p {
+    margin-bottom: 10px;
+  }
+}
+.f-socials-links {
+  font-size: 0;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    background: #293E81;
+    padding: 6px;
+
+    svg.sprite {
+      fill: #FFF;
+    }
+    &:hover {
+      background: #5270ce;
+    }
+  }
+}
+.f-contacts {
+  &-item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 15px;
+
+    &-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      overflow: hidden;
+    }
+    a {
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+.i-pin {
+  @include sprite($i-pin);
+}
+.i-mail {
+  @include sprite($i-mail);
+}
+.i-phone {
+  @include sprite($i-phone);
+}
+.f-usefull {
+  ul {
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: $secondary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.f-jur {
+  max-width: 55%;
+  padding-right: 50px;
+  font-size: 12px;
+}
+.f-counters {
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+}
+.f-fs {
+  color: #FFF;
+
+  a {
+    &:hover {
+      color: $red;
+    }
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      @include sprite($f-fs);
+    }
+  }
+}
+
+#footer_map.init {
+  height: 200px;
+}
