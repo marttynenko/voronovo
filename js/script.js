@@ -215,28 +215,6 @@ jQuery(document).ready(function($){
 
 	$('main table').wrap('<div class="responsive-table"></div>');
 
-	//плавающие соц кнопки
-	if ( $('.float-share').length) {
-
-		$(window).on('scroll', function(){
-			var windowOffset = $(window).scrollTop(),
-					floatOffset = $('.node-float-space').offset().top,
-					contentHeight = $('.node').height(),
-					floatHeight = $('.float-share').height(),
-					floatStop = floatOffset + contentHeight - floatHeight - 30;
-
-			if (windowOffset > floatOffset && windowOffset < floatStop) {
-				$('.float-share').addClass('float').removeClass('flip-bottom');
-			} else {
-				$('.float-share').removeClass('float').addClass('flip-bottom');
-
-				if (windowOffset < floatStop) {
-	        $('.float-share').removeClass('flip-bottom');
-	    	}
-			}
-		});
-	}//if end
-
 
 	//Замена телефонов и email ссылками
 	$('.phone-link, .tel').each(function(){
@@ -303,9 +281,23 @@ jQuery(document).ready(function($){
 		});
 	});
 
-
+	$(document).on('click','.node-comments-add a.btn',function(e){
+		e.preventDefault();
+		$(this).remove();
+		$('.comment-form').slideDown(200);
+	});
 	
-
+	$("#comment_form").validate({
+    rules: {
+      f_name: {
+        required: true,
+        lettersonly: true
+      },
+      f_comment: {
+        required: true
+			}
+    }
+  });
 
 
 	

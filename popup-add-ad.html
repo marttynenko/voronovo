@@ -1,0 +1,127 @@
+<div class="white-popup popup-ad zoom-anim-dialog">
+
+  <div class="h1 white-popup-title">Добавление объявления</div>
+
+  <form action="" id="form_ad">
+
+    
+
+    <div class="row">
+      <div class="col-popup-ad-img"></div>
+      <div class="col-popup-ad-body">
+        <div class="popup-ad-title">данные объявления</div>
+      </div>
+
+      <div class="col-popup-ad-img">
+        <div class="popup-ad-img">
+          <span class="popup-ad-img-hint">фото</span>
+          <input type="file" id="file_preview" name="f_photo" accept=".jpg,.jpeg,.png">
+        </div>
+      </div>
+
+      <div class="col-popup-ad-body">
+        
+
+        <div class="field">
+          <input type="text" name="f_title" placeholder="Название объявления*" required>
+        </div>
+
+        <div class="field">
+          <select name="f_category" data-placeholder="Категория*" required>
+            <option></option>
+            <option value="1">Недвижимость</option>
+            <option value="2">Авто</option>
+            <option value="3">Спорт/досуг</option>
+            <option value="4">Другое</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <select name="f_type" data-placeholder="Тип*" required>
+            <option></option>
+            <option value="1">Куплю</option>
+            <option value="2">Продам</option>
+            <option value="3">Работа</option>
+            <option value="4">Меняю</option>
+            <option value="5">Сдам/Сниму</option>
+            <option value="6">Утеряно/Найдено</option>
+            <option value="7">Услуги</option>
+            <option value="8">Разное</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <textarea name="f_descr" rows="5" placeholder="Описание"></textarea>
+        </div>
+
+        <div class="field">
+          <input type="text" name="f_price" placeholder="Цена, бел. руб.*" required>
+        </div>
+
+        <br>
+
+        <div class="popup-ad-title">данные автора</div>
+
+        <div class="field">
+          <input type="text" name="f_fio" placeholder="ФИО*" required>
+        </div>
+
+        <div class="field">
+          <input type="email" name="f_email" placeholder="Электронная почта*" required>
+        </div>
+
+        <div class="field">
+          <input type="tel" name="f_phone" placeholder="Телефон*" required>
+        </div>
+
+        <div class="field-btn">
+          <button class="btn btn-secondary btn-extra btn-block">Опубликовать</button>
+        </div>
+      </div>
+
+    </div><!--.row-->
+
+    
+    
+    
+  </form>
+
+
+  <script>
+    jQuery(document).ready(function($){
+
+      $('.white-popup input[type="checkbox"], .white-popup input[type="radio"], .white-popup select').not('.not-styler').styler({
+        singleSelectzIndex: '1',
+      });
+
+      $("#form_ad").validate({
+        rules: {
+          f_email: {
+            email: true
+          },
+          f_phone: {
+            telephone: true
+          }
+        }
+      });
+
+      function readURL(input,preview) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            $(preview).html(img);
+            // $('.preview-avatar img').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $(document).on('change','input#file_preview',function(){
+        readURL(this,'.popup-ad-img-hint');
+      });
+
+    });
+  </script>
+</div>

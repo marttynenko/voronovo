@@ -1975,3 +1975,18 @@ svg[class*="svg-news-"] {
 		background: $secondary;
 	}
 }
+
+.comment-form {
+	display: none;
+	max-width: 768px;
+}
+.gallery-snippet {
+	&-item {
+		display: block;
+		max-height: 180px;
+
+		img {
+			max-height: 180px;
+		}
+	}
+}
