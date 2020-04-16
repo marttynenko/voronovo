@@ -1020,7 +1020,7 @@ cite:after { content: ""; position: absolute; left: 50%; bottom: 0; width: 120px
 
 .node-share .ya-share2__badge:hover { border-color: #041655; }
 
-.node-share .ya-share2__icon { filter: brightness(0.65); width: 28px !important; height: 28px !important; }
+.node-share .ya-share2__icon { filter: brightness(0.65); width: 28px !important; height: 28px !important; background-position: center !important; background-repeat: no-repeat !important; }
 
 .node-cats { font-size: 0; margin-bottom: 20px; }
 
@@ -1212,9 +1212,13 @@ svg[class*="svg-news-"] { display: inline-block; vertical-align: middle; margin-
 
 .anounces-item-cat { margin-bottom: 5px; }
 
+.anounces-item-cat > *:not(:last-child) { margin-right: 10px; }
+
 .anounces-item-string span { color: #041655; }
 
 .anounces-item-event { font-weight: 700; font-size: 16px; margin-bottom: 2px; }
+
+.anounces-item-price { font-weight: 700; font-size: 16px; color: #041655; vertical-align: middle; }
 
 .vacancy-item { padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid #EFEFEF; color: #91939C; }
 
@@ -1424,6 +1428,10 @@ svg[class*="svg-news-"] { display: inline-block; vertical-align: middle; margin-
 
 .anouncements-item-cat { margin-bottom: 8px; }
 
+.anouncements-item-cat > *:not(:last-child) { margin-right: 15px; }
+
+.anouncements-item-price { color: #041655; font-weight: 700; font-size: 18px; vertical-align: middle; }
+
 .anouncements-item-title { display: inline-block; margin-bottom: 8px; font-weight: 700; font-size: 20px; }
 
 .anouncements-item-txt { margin-bottom: 8px; color: #041655; }
@@ -1445,6 +1453,8 @@ svg[class*="svg-news-"] { display: inline-block; vertical-align: middle; margin-
 .anouncement-header-left > * { margin-right: 15px; }
 
 .anouncement-body { margin-bottom: 20px; }
+
+.anouncement-price { font-weight: 700; font-size: 18px; }
 
 .side-anouncements { padding-top: 15px; }
 

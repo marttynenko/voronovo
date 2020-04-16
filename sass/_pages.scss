@@ -661,6 +661,8 @@ cite {
 		filter: brightness(0.65);
 		width: 28px !important;
 		height: 28px !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
 	}
 }
 .node-cats {
@@ -1189,6 +1191,10 @@ svg[class*="svg-news-"] {
 	}
 	&-cat {
 		margin-bottom: 5px;
+
+		& > *:not(:last-child) {
+			margin-right: 10px;
+		}
 	}
 	&-string {
 		span {
@@ -1199,6 +1205,12 @@ svg[class*="svg-news-"] {
 		font-weight: 700;
 		font-size: 16px;
 		margin-bottom: 2px;
+	}
+	&-price {
+		font-weight: 700;
+		font-size: 16px;
+		color: $primary;
+		vertical-align: middle;
 	}
 }
 .vacancy-item {
@@ -1830,6 +1842,16 @@ svg[class*="svg-news-"] {
 	}
 	&-cat {
 		margin-bottom: 8px;
+
+		& > *:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+	&-price {
+		color: $primary;
+		font-weight: 700;
+		font-size: 18px;
+		vertical-align: middle;
 	}
 	&-title {
 		display: inline-block;
@@ -1881,6 +1903,10 @@ svg[class*="svg-news-"] {
 	}
 	&-body {
 		margin-bottom: 20px;
+	}
+	&-price {
+		font-weight: 700;
+		font-size: 18px;
 	}
 }
 .side-anouncements {
