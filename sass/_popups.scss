@@ -146,7 +146,7 @@
     }
   }
 }
-.popup-ad {
+.popup-an {
   max-width: 640px;
 
   &-img {
@@ -185,11 +185,11 @@
   }
 }
 
-.col-popup-ad-img {
+.col-popup-an-img {
   flex: 0 0 150px;
   max-width: 150px;
 }
-.col-popup-ad-body {
+.col-popup-an-body {
   flex: 0 0 calc(100% - 150px);
   max-width: calc(100% - 150px);
 }

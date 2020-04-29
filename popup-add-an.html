@@ -1,25 +1,25 @@
-<div class="white-popup popup-ad zoom-anim-dialog">
+<div class="white-popup popup-an zoom-anim-dialog">
 
   <div class="h1 white-popup-title">Добавление объявления</div>
 
-  <form action="" id="form_ad">
+  <form action="" id="form_an">
 
     
 
     <div class="row">
-      <div class="col-popup-ad-img"></div>
-      <div class="col-popup-ad-body">
-        <div class="popup-ad-title">данные объявления</div>
+      <div class="col-popup-an-img"></div>
+      <div class="col-popup-an-body">
+        <div class="popup-an-title">данные объявления</div>
       </div>
 
-      <div class="col-popup-ad-img">
-        <div class="popup-ad-img">
-          <span class="popup-ad-img-hint">фото</span>
+      <div class="col-popup-an-img">
+        <div class="popup-an-img">
+          <span class="popup-an-img-hint">фото</span>
           <input type="file" id="file_preview" name="f_photo" accept=".jpg,.jpeg,.png">
         </div>
       </div>
 
-      <div class="col-popup-ad-body">
+      <div class="col-popup-an-body">
         
 
         <div class="field">
@@ -60,7 +60,7 @@
 
         <br>
 
-        <div class="popup-ad-title">данные автора</div>
+        <div class="popup-an-title">данные автора</div>
 
         <div class="field">
           <input type="text" name="f_fio" placeholder="ФИО*" required>
@@ -94,7 +94,7 @@
         singleSelectzIndex: '1',
       });
 
-      $("#form_ad").validate({
+      $("#form_an").validate({
         rules: {
           f_email: {
             email: true
@@ -119,7 +119,7 @@
       }
 
       $(document).on('change','input#file_preview',function(){
-        readURL(this,'.popup-ad-img-hint');
+        readURL(this,'.popup-an-img-hint');
       });
 
     });
